@@ -1,4 +1,4 @@
-
+// https://stackoverflow.com/questions/39993676/code-inside-domcontentloaded-event-not-working
 
 document.addEventListener("DOMContentLoaded", function() {
   const hash = window.location.hash; // bv. #python
