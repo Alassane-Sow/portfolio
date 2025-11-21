@@ -74,78 +74,74 @@
 
 
     <!-- Contact Content -->
-    <section class="container mb-5">
-        <div class="row">
+<section class="container mb-5">
+    <div class="row">
 
-            <!-- Left Column - Contact Info -->
-            <div class="col-lg-4 mb-4 mb-lg-0">
-                <div class="card shadow-sm h-100">
-                    <div class="card-body">
-                        <h2 class="h5 mb-4">Contactgegevens</h2>
+        <!-- Left Column - Contact Info -->
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h2 class="h5 mb-4">Contactgegevens</h2>
 
-                        <p class="mb-3">
-                            <strong>Adres:</strong><br>
-                            Dorpstraat 150<br>
-                            2220 Antwerpen
-                        </p>
+                    <p class="mb-3">
+                        <strong>Adres:</strong><br>
+                        Dorpstraat 150<br>
+                        2220 Antwerpen
+                    </p>
 
-                        <p class="mb-3">
-                            <strong>Tel:</strong><br>
-                            +32 123 45 67 89
-                        </p>
+                    <p class="mb-3">
+                        <strong>Tel:</strong><br>
+                        +32 123 45 67 89
+                    </p>
 
-                        <p class="mb-0">
-                            <strong>E-mail:</strong><br>
-                            <a href="mailto:info@as.com">info@as.com</a>
-                        </p>
-                    </div>
+                    <p class="mb-0">
+                        <strong>E-mail:</strong><br>
+                        <a href="mailto:info@as.com">info@as.com</a>
+                    </p>
                 </div>
             </div>
-
-
-
-
-
-
-            <!-- Right Column - Contact Form -->
-            <div class="col-lg-8">
-                <div class="card shadow-sm">
-                    <div class="card-body p-4">
-                        <h2 class="h5 mb-4">Stuur een bericht</h2>
-
-                        <form>
-                            <div class="mb-3">
-                                <label for="naam" class="form-label">Naam</label>
-                                <input type="text" class="form-control" id="naam" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="email" class="form-label">E-mail</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="onderwerp" class="form-label">Onderwerp</label>
-                                <input type="text" class="form-control" id="onderwerp" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="bericht" class="form-label">Bericht</label>
-                                <textarea class="form-control" id="bericht" rows="6" required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-blue btn-lg">Verzend</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </section>
 
+        <!-- Right Column - Contact Form -->
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-body p-4">
+                    <h2 class="h5 mb-4">Stuur een bericht</h2>
 
+                    <!-- Netlify-ready form -->
+                    <form name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact">
 
+                        <div class="mb-3">
+                            <label for="naam" class="form-label">Naam</label>
+                            <input type="text" class="form-control" id="naam" name="naam" required>
+                        </div>
 
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="onderwerp" class="form-label">Onderwerp</label>
+                            <input type="text" class="form-control" id="onderwerp" name="onderwerp" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="bericht" class="form-label">Bericht</label>
+                            <textarea class="form-control" id="bericht" name="bericht" rows="6" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-blue btn-lg">Verzend</button>
+                    </form>
+                    
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
 
