@@ -75,3 +75,15 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-text p {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #333;
+}
