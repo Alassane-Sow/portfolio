@@ -1,38 +1,44 @@
-/* CSS Reset */
+/* Kleine CSS reset zodat alles overal hetzelfde start */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Basis voor het document */
 html, body {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
+/* Zorgt dat tekst en fonts normaal weergegeven worden */
 body {
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
+/* Afbeeldingen en media breken niet uit de container */
+img, video, canvas, svg {
   max-width: 100%;
+  display: block;
 }
 
+/* Form elementen volgen dezelfde font-size */
 input, button, textarea, select {
   font: inherit;
 }
 
+/* Tekst kan afbreken indien nodig */
 p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
+/* Links zonder standaard blauwe underline */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* Lijsten zonder bullets voor flexibele styling */
 ul, ol {
   list-style: none;
 }

@@ -1,82 +1,66 @@
-/* Minimal Custom CSS - Mostly Bootstrap */
-
-/* Color Variables */
-:root {
-  --color-blue: #2563EB;
-  --color-dark: #181126;
-  --color-white: #FFFFFF;
-}
-
-
-
-/* Base Styling */
+/* Fonts komen uit fonts.css */
 body {
   font-family: var(--font-primary);
-  color: var(--color-dark);
+  color: #181126;
+  background-color: #fff;
 }
 
+/* Kleuren */
+:root {
+  --blue: #2563EB;
+  --dark: #181126;
+}
 
-
-/* Custom Blue Color Classes */
+/* Tekst */
 .text-blue {
-  color: var(--color-blue) !important;
+  color: var(--blue) !important;
 }
 
-.bg-blue {
-  background-color: var(--color-blue) !important;
+h1, h2, h3 {
+  font-family: var(--font-heading);
 }
 
+/* Knoppen */
 .btn-blue {
-  background-color: var(--color-blue);
-  border-color: var(--color-blue);
-  color: white;
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
 }
 
 .btn-blue:hover {
   background-color: #1e40af;
   border-color: #1e40af;
-  color: white;
+  color: #fff;
 }
 
-
-
-
-/* Active Nav Link */
+/* Navigatie */
 .nav-link.active {
-  color: var(--color-blue) !important;
+  color: var(--blue) !important;
   font-weight: 600;
 }
 
-
-
-
-/* Project Card Hover Effect */
+/* Portfolio kaarten */
 .project-card {
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 
+/* .project-card:hover {
+  transform: translateY(-4px);
+} */
 
-
-
-/* Social Icons Styling */
+/* Social icons */
 .social-icons a {
-  color: var(--color-dark);
-  font-size: 1.5rem;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease;
+  font-size: 1.4rem;
+  color: var(--dark);
+  margin: 0 0.4rem;
+  transition: 0.2s;
 }
 
 .social-icons a:hover {
-  color: var(--color-blue);
+  color: var(--blue);
 }
 
-
-/* Smooth Scroll naar ankers (#id) om naar elke project apart */
-html {
-  scroll-behavior: smooth;
-}
-
-
+/* About tekst */
 .about-text {
   max-width: 800px;
   margin: 0 auto;
@@ -85,5 +69,11 @@ html {
 .about-text p {
   line-height: 1.8;
   font-size: 1.05rem;
-  color: #333;
+}
+
+/* Portfolio afbeeldingen */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
 }
