@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // mijn locatie 
     let myMarker = L.marker([51.2194, 4.4025]).addTo(map);
-    myMarker.bindPopup("<b>Antwerpen</b><br>Antwerpen").openPopup();
+    myMarker.bindPopup("<b>Antwerpen</b><br>Dorpstraat 150").openPopup();
 });
