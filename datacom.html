@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Details | Alassane Sow</title>
+    <title>Datacom & Netwerken | Alassane Sow</title>
 
-    <!-- reset css  -->
     <link rel="stylesheet" href="css/reset.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -13,49 +12,445 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <script src="js/script.js" defer></script>
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
 
-    <!-- Bootstrap js -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
-    <!--  js -->
-    <script src="js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      :root {
+        --primary: #0066ff;
+        --primary-dark: #0052cc;
+        --primary-light: #e6f0ff;
+        --accent: #ff6b35;
+        --success: #10b981;
+        --gray-900: #111827;
+        --gray-800: #1f2937;
+        --gray-700: #374151;
+        --gray-600: #4b5563;
+        --gray-400: #9ca3af;
+        --gray-200: #e5e7eb;
+        --gray-100: #f3f4f6;
+      }
+
+      * {
+        font-family: 'Inter', sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #f5f7fa 0%, #f1f5f9 100%);
+        color: var(--gray-800);
+      }
+
+      .navbar {
+        background: white !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--gray-700) !important;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary) !important;
+      }
+
+      .dropdown-menu {
+        border: 1px solid var(--gray-200);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        border-radius: 8px;
+      }
+
+      .dropdown-item {
+        padding: 10px 16px;
+        color: var(--gray-700);
+        transition: all 0.2s ease;
+        border-left: 3px solid transparent;
+      }
+
+      .dropdown-item:hover {
+        background-color: var(--primary-light);
+        color: var(--primary);
+        border-left-color: var(--primary);
+        padding-left: 19px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, var(--primary-light) 0%, rgba(0, 102, 255, 0.05) 100%);
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 10px;
+      }
+
+      .hero .badge {
+        background: var(--primary);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      .hero p {
+        color: var(--gray-600);
+        font-size: 1.1rem;
+        margin: 0;
+      }
+
+      .breadcrumb-section {
+        background: white;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--gray-200);
+      }
+
+      .breadcrumb {
+        margin: 0;
+        background: transparent;
+      }
+
+      .breadcrumb-item a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .breadcrumb-item a:hover {
+        color: var(--primary-dark);
+      }
+
+      .back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 30px;
+        transition: gap 0.3s ease;
+      }
+
+      .back-btn:hover {
+        gap: 12px;
+      }
+
+      .highlights {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+        margin: 50px 0;
+      }
+
+      .highlight-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .highlight-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 102, 255, 0.15);
+      }
+
+      .highlight-card .icon {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+        color: var(--primary);
+      }
+
+      .highlight-card h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 8px;
+      }
+
+      .highlight-card p {
+        color: var(--gray-600);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .photo-section {
+        background: white;
+        padding: 50px 0;
+        margin: 40px 0;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .photo-section.alt {
+        background: transparent;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .section-title i {
+        font-size: 2rem;
+        color: var(--primary);
+      }
+
+      .photo-img {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .photo-img:hover {
+        transform: scale(1.02);
+      }
+
+      .photo-text h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--gray-900);
+        margin-bottom: 15px;
+      }
+
+      .photo-text p {
+        color: var(--gray-700);
+        line-height: 1.8;
+        margin-bottom: 15px;
+        font-size: 1rem;
+      }
+
+      .photo-text ul {
+        padding-left: 20px;
+        margin: 15px 0;
+      }
+
+      .photo-text li {
+        color: var(--gray-700);
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .skill-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 15px 0;
+      }
+
+      .skill-badge {
+        background: var(--primary-light);
+        color: var(--primary);
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .gallery-section {
+        background: white;
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin: 40px 0;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        height: 250px;
+        background: var(--gray-100);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .gallery-item-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0,0,0,0.7));
+        color: white;
+        padding: 20px;
+        font-weight: 600;
+        transform: translateY(10px);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-item-label {
+        transform: translateY(0);
+      }
+
+      .accordion-section {
+        background: white;
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        margin: 40px 0;
+      }
+
+      .accordion-button {
+        font-weight: 600;
+        color: var(--gray-900);
+        box-shadow: none;
+        padding: 16px 20px;
+        background: var(--gray-100);
+        border: 1px solid var(--gray-200);
+      }
+
+      .accordion-button:not(.collapsed) {
+        background: var(--primary-light);
+        color: var(--primary);
+      }
+
+      .accordion-body {
+        padding: 20px;
+        color: var(--gray-700);
+        line-height: 1.8;
+      }
+
+      .accordion-body ul {
+        padding-left: 20px;
+      }
+
+      .accordion-body li {
+        margin-bottom: 8px;
+      }
+
+      footer {
+        background: var(--gray-900);
+        color: var(--gray-400);
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      .footer-nav a {
+        color: var(--gray-400);
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease;
+        font-weight: 500;
+      }
+
+      .footer-nav a:hover {
+        color: var(--primary);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .photo-content {
+          flex-direction: column;
+          gap: 30px;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+
+        .highlights {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .photo-section,
+        .gallery-section,
+        .accordion-section {
+          padding: 30px 20px;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Header -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a class="navbar-brand" href="index.html"
-            ><img src="assets/image/logo.png" alt="AS Logo" height="50"
-          /></a>
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/image/logo.png" alt="Logo" height="50" />
+          </a>
+
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="portfolio.html"
+                  id="portfolioDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="portfolioDropdown" id="projectDropdown">
+                  <li><a class="dropdown-item" href="portfolio.html">Alle projecten</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
@@ -66,289 +461,343 @@
       </nav>
     </header>
 
-    <!-- het titel van pg -->
-    <section class="bg-light py-4 my-3">
+    <div class="breadcrumb-section">
       <div class="container">
-        <div class="">
-          <div class="col-lg-8 mx-auto text-center">
-            <h1 class="display-5 fw-bold mb-3">Project Details</h1>
-            <a href="portfolio.html" class="btn btn-blue"
-              >Terug naar Portfolio</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Main Content met Sidebar -->
-    <div class="container my-5">
-      <div class="row">
-        <!-- MAIN CONTENT -->
-        <main class="col-md-9">
-          <section id="datacom">
-            <h2 class="h3 mb-4 text-blue text-center">Datacom & Netwerken</h2>
-
-            <!-- Foto 1 met tekst -->
-            <div class="row mb-5">
-              <div class="col-lg-6 mb-4">
-                <figure>
-                  <img
-                    src="assets/image/netwerk.jpg"
-                    alt="Netwerk"
-                    class="img-fluid rounded shadow"
-                  />
-                  <figcaption class="h6 small mt-2 text-muted">
-                    &copy; pixabay
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div class="col-lg-6">
-                <h3 class="h5 mb-3">Netwerk Infrastructuur</h3>
-                <p>
-                  In Datacom & Netwerken leerde ik werken met routers, switches
-                  en netwerkconfiguratie. Het opzetten van een complete
-                  netwerkinfrastructuur was het hoofddoel.
-                </p>
-                <p><strong>Wat ik leerde:</strong></p>
-                <ul>
-                  <li>Netwerk topologie design</li>
-                  <li>Cable management en patch panels</li>
-                  <li>IP-adressering en subnetting</li>
-                  <li>Structured cabling standards</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Foto 2 met tekst -->
-            <div class="row mb-5">
-              <div class="col-lg-6 mb-4">
-                <figure>
-                  <img
-                    src="assets/image/router.webp"
-                    alt="Router Config"
-                    class="img-fluid rounded shadow"
-                  />
-                  <figcaption class="h6 small mt-2 text-muted">
-                    &copy; pixabay
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div class="col-lg-6">
-                <h3 class="h5 mb-3">Router Configuratie</h3>
-                <p>
-                  Router configuratie via de command line interface (CLI) was
-                  een belangrijke vaardigheid. Ik leerde routing protocols
-                  configureren en routing tables beheren.
-                </p>
-                <p><strong>Routing skills:</strong></p>
-                <ul>
-                  <li>Static routing configureren</li>
-                  <li>OSPF en EIGRP dynamic routing</li>
-                  <li>Routing tables analyseren</li>
-                  <li>Default gateway instellen</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Foto 3 met tekst -->
-            <div class="row mb-5">
-              <div class="col-lg-6 mb-4">
-                <figure>
-                  <img
-                    src="assets/image/sw.jpg"
-                    alt="Switch"
-                    class="img-fluid rounded shadow"
-                  />
-                  <figcaption class="h6 small mt-2 text-muted">
-                    &copy; pixabay
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div class="col-lg-6">
-                <h3 class="h5 mb-3">Switch & VLAN Management</h3>
-                <p>
-                  Switches configureren en VLAN's instellen voor netwerk
-                  segmentatie. Dit was essentieel voor het scheiden van
-                  verschillende netwerk groepen.
-                </p>
-                <p><strong>Switch vaardigheden:</strong></p>
-                <ul>
-                  <li>VLAN's aanmaken en toewijzen</li>
-                  <li>Trunk ports configureren</li>
-                  <li>Port security instellen</li>
-                  <li>Spanning Tree Protocol (STP)</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Foto 4 - Rack Layout -->
-            <div class="row mb-5">
-              <div class="col-lg-6 mb-4">
-                <figure>
-                  <img
-                    src="assets/image/bekab.png"
-                    alt="Gestructureerd Bekabelen"
-                    class="img-fluid rounded shadow"
-                  />
-                  <figcaption class="h6 small mt-2 text-muted">
-                    &copy; eigen ontwerp – bekabelingsplan Webwiz
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div class="col-lg-6">
-                <h3 class="h5 mb-3">
-                  Gestructureerd Bekabelen - Webwiz Project
-                </h3>
-                <p>
-                  Voor het bedrijf Webwiz ontwierp ik een volledig
-                  gestructureerd bekabelingsplan voor een kantoorgebouw met 24
-                  werkplekken verdeeld over 2 verdiepingen. Het project omvatte
-                  alles van kabelplanning tot rack layout en patch panels.
-                </p>
-                <p><strong>Projectomvang:</strong></p>
-                <ul>
-                  <li>
-                    24 werkplekken over 6 kantoren (gelijkvloers + 1e
-                    verdieping)
-                  </li>
-                  <li>20 desktops, 10 laptops (waarvan 6 flexi-laptops)</li>
-                  <li>24 VoIP telefoons en 6 MFP printers</li>
-                  <li>2 on-premise servers in afgesloten ruimte</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Foto 5 - Rack Layout -->
-            <div class="row mb-5">
-              <div class="col-lg-6 mb-4">
-                <figure>
-                  <img
-                    src="assets/image/rack.png"
-                    alt="Rack Layout"
-                    class="img-fluid rounded shadow"
-                  />
-                  <figcaption class="h6 small mt-2 text-muted">
-                    &copy; eigen ontwerp – rack layout
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div class="col-lg-6">
-                <h3 class="h5 mb-3">Rack Design & Cable Management</h3>
-                <p>
-                  Het ontwerp van de rack configuratie met patch panels,
-                  switches en cable management systemen. Alles volgens
-                  professionele standaarden met aandacht voor toekomstige
-                  uitbreidingen.
-                </p>
-                <p><strong>Technische oplossingen:</strong></p>
-                <ul>
-                  <li>Patch panels voor gestructureerde bekabeling</li>
-                  <li>Wall/floor outlets bij werkplekken</li>
-                  <li>Afstandsberekeningen voor kabeltype (Cat6/Cat6a)</li>
-                  <li>Cable management voor nette afwerking</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </main>
-
-        <!-- ASIDE  -->
-        <aside class="col-md-3 border-start ps-4">
-          <!-- Contact van aside -->
-          <h2 class="text-uppercase fs-5 fw-bolder pt-3">contact</h2>
-          <p>
-            Alassane Sow<br />
-            <a href="mailto:alassane.sow@student.ap.be"
-              >alassane.sow@student.ap.be</a
-            ><br />
-            +32 123 45 67 89
-          </p>
-
-          <!-- Social Icons -->
-          <ul class="list-inline socials">
-            <li class="list-inline-item">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                <i class="bi bi-linkedin"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-              >
-                <i class="bi bi-github"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="mailto:alassane.sow@student.ap.be" aria-label="Email">
-                <i class="bi bi-envelope"></i>
-              </a>
-            </li>
-          </ul>
-
-          <h2 class="text-uppercase fs-6 fw-bolder pt-3">projecten</h2>
-          <ul class="list-unstyled small">
-            <li><a href="python.html#python">Python Scripting</a></li>
-            <li><a href="datacom.html#datacom">Datacom & Netwerken</a></li>
-            <li><a href="server.html#server">Serverbeheer</a></li>
-            <li><a href="webtch.html#webtech">Webtechnologie</a></li>
-            <li><a href="bestering.html#os">Besturingssystemen</a></li>
-            <li>
-              <a href="packettracer.html#packet">Packet Tracer Netwerk</a>
-            </li>
-          </ul>
-        </aside>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="portfolio.html">Portfolio</a></li>
+            <li class="breadcrumb-item active">Datacom & Netwerken</li>
+          </ol>
+        </nav>
       </div>
     </div>
 
-    <footer class="bg-light py-4 mt-5">
+    <div class="hero">
       <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <div class="social-icons mb-3">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                ><i class="bi bi-github"></i
-              ></a>
-              <a href="mailto:alassane.sow@student.ap.be" aria-label="Email"
-                ><i class="bi bi-envelope"></i
-              ></a>
-            </div>
+        <span class="badge">Networking</span>
+        <h1>Datacom & Netwerken</h1>
+        <p>Netwerkconfiguratie, routing, VLAN's en gestructureerde bekabeling</p>
+      </div>
+    </div>
 
-            <!-- Footer Nav -->
-            <nav class="footer-nav mb-3">
-              <a href="index.html" class="mx-2">Home</a>
-              <a href="portfolio.html" class="mx-2">Portfolio</a>
-              <a href="contact.html" class="mx-2">Contact</a>
-            </nav>
-            <p class="mb-0 text-muted">
-              &copy; <span id="year"></span> Alassane Sow
-            </p>
+    <div class="container">
+      <a href="portfolio.html" class="back-btn">
+        <i class="bi bi-arrow-left"></i> Terug naar portfolio
+      </a>
+
+      <div class="highlights">
+        <div class="highlight-card">
+          <div class="icon"><i class="bi bi-diagram-3"></i></div>
+          <h3>Wat geleerd</h3>
+          <p>Routing, VLAN, Switching, TCP/IP</p>
+        </div>
+        <div class="highlight-card">
+          <div class="icon"><i class="bi bi-hdd-network"></i></div>
+          <h3>Hardware</h3>
+          <p>Routers, Switches, Patch Panels</p>
+        </div>
+        <div class="highlight-card">
+          <div class="icon"><i class="bi bi-cable"></i></div>
+          <h3>Infrastructure</h3>
+          <p>Bekabeling, Topology, Design</p>
+        </div>
+        <div class="highlight-card">
+          <div class="icon"><i class="bi bi-star"></i></div>
+          <h3>Project</h3>
+          <p>Webwiz - 24 werkplekken</p>
+        </div>
+      </div>
+
+      <div class="photo-section">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <img src="assets/image/netwerk.jpg" alt="Netwerk" class="photo-img img-fluid" />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title">
+              <i class="bi bi-diagram-3"></i> Netwerk Infrastructuur
+            </h2>
+            <div class="photo-text">
+              <p>
+                In Datacom & Netwerken leerde ik werken met routers, switches 
+                en netwerkconfiguratie. Het opzetten van een complete 
+                netwerkinfrastructuur was het hoofddoel.
+              </p>
+              <h3>Netwerk Design</h3>
+              <ul>
+                <li>Netwerk topologie ontwerpen</li>
+                <li>IP-adressering en subnetting (CIDR)</li>
+                <li>Structured cabling standards</li>
+                <li>Cable management en patch panels</li>
+              </ul>
+              <div class="skill-badges">
+                <span class="skill-badge"><i class="bi bi-diagram-3"></i> Design</span>
+                <span class="skill-badge"><i class="bi bi-cable"></i> Cabling</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="photo-section alt">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 order-lg-2">
+            <img src="assets/image/router.webp" alt="Router Config" class="photo-img img-fluid" />
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="section-title">
+              <i class="bi bi-hdd-network"></i> Router Configuratie
+            </h2>
+            <div class="photo-text">
+              <p>
+                Router configuratie via command line interface (CLI) was een 
+                belangrijke vaardigheid. Ik leerde routing protocols configureren 
+                en routing tables beheren.
+              </p>
+              <h3>Routing Skills</h3>
+              <ul>
+                <li>Static routing configureren</li>
+                <li>Dynamic routing: OSPF en EIGRP</li>
+                <li>Routing tables analyseren</li>
+                <li>Default gateway instellen</li>
+                <li>Route summarization en optimization</li>
+              </ul>
+              <div class="skill-badges">
+                <span class="skill-badge"><i class="bi bi-diagram-2"></i> OSPF</span>
+                <span class="skill-badge"><i class="bi bi-diagram-2"></i> EIGRP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-section">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <img src="assets/image/sw.jpg" alt="Switch" class="photo-img img-fluid" />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title">
+              <i class="bi bi-diagram-2"></i> Switch & VLAN Management
+            </h2>
+            <div class="photo-text">
+              <p>
+                Switches configureren en VLAN's instellen voor netwerk segmentatie. 
+                Dit was essentieel voor het scheiden van verschillende netwerk groepen 
+                en beveiliging.
+              </p>
+              <h3>Switch Vaardigheden</h3>
+              <ul>
+                <li>VLAN's aanmaken en toewijzen</li>
+                <li>Trunk ports configureren</li>
+                <li>Port security en MAC filtering</li>
+                <li>Spanning Tree Protocol (STP)</li>
+                <li>Port mirroring voor monitoring</li>
+              </ul>
+              <div class="skill-badges">
+                <span class="skill-badge"><i class="bi bi-shield"></i> VLAN</span>
+                <span class="skill-badge"><i class="bi bi-lock"></i> Security</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-section alt">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 order-lg-2">
+            <img src="assets/image/bekab.png" alt="Gestructureerd Bekabelen" class="photo-img img-fluid" />
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <h2 class="section-title">
+              <i class="bi bi-cable"></i> Gestructureerd Bekabelen
+            </h2>
+            <div class="photo-text">
+              <p>
+                Voor het bedrijf Webwiz ontwierp ik een volledig gestructureerd 
+                bekabelingsplan voor een kantoorgebouw met 24 werkplekken verdeeld 
+                over 2 verdiepingen.
+              </p>
+              <h3>Webwiz Project Omvang</h3>
+              <ul>
+                <li>24 werkplekken over 6 kantoren (gelijkvloers + 1e verdieping)</li>
+                <li>20 desktops, 10 laptops (waarvan 6 flexi-laptops)</li>
+                <li>24 VoIP telefoons en 6 MFP printers</li>
+                <li>2 on-premise servers in afgesloten ruimte</li>
+              </ul>
+              <div class="skill-badges">
+                <span class="skill-badge"><i class="bi bi-diagram-3"></i> Design</span>
+                <span class="skill-badge"><i class="bi bi-calculator"></i> Planning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-section">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <img src="assets/image/rack.png" alt="Rack Layout" class="photo-img img-fluid" />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="section-title">
+              <i class="bi bi-layers"></i> Rack Design & Cable Management
+            </h2>
+            <div class="photo-text">
+              <p>
+                Ontwerp van de rack configuratie met patch panels, switches en 
+                cable management systemen. Alles volgens professionele standaarden 
+                met aandacht voor toekomstige uitbreidingen.
+              </p>
+              <h3>Technische Oplossingen</h3>
+              <ul>
+                <li>Patch panels voor gestructureerde bekabeling</li>
+                <li>Wall/floor outlets bij werkplekken</li>
+                <li>Afstandsberekeningen voor kabeltype (Cat6/Cat6a)</li>
+                <li>Cable management voor nette afwerking</li>
+                <li>Proper labeling en documentatie</li>
+              </ul>
+              <div class="skill-badges">
+                <span class="skill-badge"><i class="bi bi-gear"></i> Installation</span>
+                <span class="skill-badge"><i class="bi bi-file-text"></i> Documentation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-section">
+        <h2 class="section-title">
+          <i class="bi bi-images"></i> Project Designs & Screenshots
+        </h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="assets/image/netwerk.jpg" alt="Network Design" />
+            <div class="gallery-item-label">Network Infrastructure</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/image/router.webp" alt="Router Config" />
+            <div class="gallery-item-label">Router Configuration</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/image/bekab.png" alt="Bekabeling Plan" />
+            <div class="gallery-item-label">Bekabeling Plan</div>
+          </div>
+          <div class="gallery-item">
+            <img src="assets/image/rack.png" alt="Rack Layout" />
+            <div class="gallery-item-label">Rack Layout</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-section">
+        <h2 class="section-title">
+          <i class="bi bi-list-ul"></i> Meer Details
+        </h2>
+        <div class="accordion" id="detailsAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLearning">
+                <i class="bi bi-star me-2"></i> Leerdoelen Bereikt
+              </button>
+            </h2>
+            <div id="collapseLearning" class="accordion-collapse collapse show" data-bs-parent="#detailsAccordion">
+              <div class="accordion-body">
+                <p><strong>Technische Skills:</strong></p>
+                <ul>
+                  <li>Netwerk design en planning</li>
+                  <li>IP adressering en subnetting (CIDR)</li>
+                  <li>Static en dynamic routing (OSPF, EIGRP)</li>
+                  <li>VLAN configuratie en management</li>
+                  <li>Structured cabling standards (TIA/EIA-568)</li>
+                  <li>Cisco router en switch CLI</li>
+                  <li>Network troubleshooting en diagnostics</li>
+                </ul>
+                <p><strong>Soft Skills:</strong></p>
+                <ul>
+                  <li>Projectplanning en documentatie</li>
+                  <li>Technical drawing en design</li>
+                  <li>Equipment procurement</li>
+                  <li>Professional installation standards</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTools">
+                <i class="bi bi-tools me-2"></i> Tools & Equipment
+              </button>
+            </h2>
+            <div id="collapseTools" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+              <div class="accordion-body">
+                <p><strong>Hardware:</strong> Cisco routers, Cisco switches, patch panels, wall outlets</p>
+                <p><strong>Cabling:</strong> Cat5e, Cat6, Cat6a structured cabling</p>
+                <p><strong>Software:</strong> Cisco IOS, Cisco Packet Tracer, GNS3</p>
+                <p><strong>Standards:</strong> TIA/EIA-568B, IEEE 802.1Q (VLAN), OSI Model</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOutcomes">
+                <i class="bi bi-check-circle me-2"></i> Projectresultaten
+              </button>
+            </h2>
+            <div id="collapseOutcomes" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+              <div class="accordion-body">
+                <p>
+                  Het Webwiz project heeft mij laten zien hoe je van begin tot eind 
+                  een professionele netwerk infrastructuur opzet. Van design tot 
+                  implementatie - alles volgens standaarden en best practices.
+                </p>
+                <p>
+                  Deze praktische ervaring in netwerk engineering, combined met 
+                  routing en switching kennis, maakt mij klaar voor rollen als 
+                  Network Technician of Systems Administrator.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <nav class="footer-nav mb-3">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="mb-0">
+        &copy; <span id="year"></span> Alassane Sow. All rights reserved.
+      </p>
     </footer>
+
+    <script>
+      const projects = [
+        { id: 1, title: "Python Scripting", link: "python.html" },
+        { id: 2, title: "Datacom & Netwerken", link: "datacom.html" },
+        { id: 3, title: "Serverbeheer", link: "server.html" },
+        { id: 4, title: "Webtechnologie Portfolio", link: "webtch.html" },
+        { id: 5, title: "Besturingssystemen", link: "bestering.html" },
+        { id: 6, title: "Packet Tracer Netwerk", link: "packettracer.html" }
+      ];
+
+      function populateProjectDropdown() {
+        const dropdown = document.getElementById("projectDropdown");
+        projects.forEach((project) => {
+          const li = document.createElement("li");
+          li.innerHTML = `<a class="dropdown-item" href="${project.link}">${project.title}</a>`;
+          dropdown.appendChild(li);
+        });
+      }
+
+      populateProjectDropdown();
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

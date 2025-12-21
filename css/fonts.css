@@ -1,8 +1,161 @@
-/* Google Fonts Import online gevonden het tekst  Inter (body tekst) en Poppins (koppen)  */
+/* ============================================
+   GOOGLE FONTS IMPORT
+   ============================================ */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
 
-/* Font Variables */
+/* ============================================
+   FONT VARIABLES
+   ============================================ */
 :root {
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Poppins', sans-serif;
+  
+  /* Font sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.4;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+}
+
+/* ============================================
+   GLOBAL TYPOGRAPHY
+   ============================================ */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+}
+
+/* ============================================
+   HEADINGS
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: var(--font-size-5xl);
+}
+
+h2 {
+  font-size: var(--font-size-4xl);
+}
+
+h3 {
+  font-size: var(--font-size-3xl);
+}
+
+h4 {
+  font-size: var(--font-size-2xl);
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+}
+
+/* ============================================
+   PARAGRAPH & TEXT
+   ============================================ */
+p {
+  margin-bottom: 1rem;
+  line-height: var(--line-height-normal);
+}
+
+small {
+  font-size: var(--font-size-sm);
+}
+
+strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+a {
+  font-family: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: var(--line-height-normal);
+}
+
+/* ============================================
+   CODE & PREFORMATTED TEXT
+   ============================================ */
+code, pre {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: var(--font-size-sm);
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+/* ============================================
+   RESPONSIVE TYPOGRAPHY
+   ============================================ */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: var(--font-size-4xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  h3 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  body {
+    font-size: var(--font-size-sm);
+  }
 }

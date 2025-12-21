@@ -1,44 +1,80 @@
-/* Kleine CSS reset zodat alles overal hetzelfde start */
-* {
+/* ============================================
+   UNIVERSAL RESET - MINIMAL VERSION
+   ============================================ */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Basis voor het document */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 html, body {
   width: 100%;
   height: 100%;
 }
 
-/* Zorgt dat tekst en fonts normaal weergegeven worden */
 body {
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Afbeeldingen en media breken niet uit de container */
-img, video, canvas, svg {
-  max-width: 100%;
-  display: block;
+/* Typography */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }
 
-/* Form elementen volgen dezelfde font-size */
-input, button, textarea, select {
-  font: inherit;
+strong, b {
+  font-weight: 600;
 }
 
-/* Tekst kan afbreken indien nodig */
-p, h1, h2, h3, h4, h5, h6 {
-  word-break: break-word;
-}
-
-/* Links zonder standaard blauwe underline */
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
-/* Lijsten zonder bullets voor flexibele styling */
+/* Lists */
 ul, ol {
   list-style: none;
+}
+
+/* Media */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Forms */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+input:focus,
+button:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Selection */
+::selection {
+  background-color: #0066ff;
+  color: white;
 }

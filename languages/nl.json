@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Alassane Sow",
+    "subtitle": "Aankomend IT-Professional",
+    "about_title": "Over mij",
+    "about_text": "Ik ben Alassane Sow, student Systeem- en Netwerkbeheer aan AP Hogeschool Antwerpen.",
+    "cta_button": "Bekijk Portfolio"
+  },
+  "contact": {
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "specialization": "Specialisatie"
+  },
+  "footer": {
+    "rights": "Alle rechten voorbehouden"
+  }
+}

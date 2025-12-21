@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Alassane Sow",
+    "subtitle": "Upcoming IT Professional",
+    "about_title": "About Me",
+    "about_text": "I am Alassane Sow, a student in System and Network Administration at AP University of Applied Sciences Antwerp.",
+    "cta_button": "View Portfolio"
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Phone",
+    "specialization": "Specialization"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  }
+}

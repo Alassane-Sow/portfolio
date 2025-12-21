@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "portfolio": "Portefeuille",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Alassane Sow",
+    "subtitle": "Futur Professionnel IT",
+    "about_title": "À propos de moi",
+    "about_text": "Je suis Alassane Sow, étudiant en Gestion des Systèmes et Réseaux à l'Hogeschool AP Anvers.",
+    "cta_button": "Voir le Portefeuille"
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Téléphone",
+    "specialization": "Spécialisation"
+  },
+  "footer": {
+    "rights": "Tous les droits réservés"
+  }
+}
